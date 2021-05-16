@@ -1,4 +1,26 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# eCommerce Platform
+> eCommerce platform built with the react & Redux.
+## Features
+
+- Full featured shopping cart
+- add edit delete product
+- check product in stock
+- protected router
+- login and register 
+- validation login and register
+- Product reviews and ratings
+- Top products carousel
+- Product pagination
+- Product search feature
+- User profile with orders
+- Admin product management
+- Admin user management
+- Admin Order details page
+- Mark orders as delivered option
+- Checkout process (shipping, payment method, etc)
+- PayPal / credit card integration
+- Database seeder (products & users)
 
 ## Available Scripts
 

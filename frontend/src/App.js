@@ -10,6 +10,9 @@ import UserLoginScreen from "./components/screens/UserLoginScreen"
 import RegisterScreen from "./components/screens/RegisterScreen"
 import { useSelector } from "react-redux"
 import ProfileScreen from "./components/screens/ProfileScreen"
+import ShippingScreen from "./components/screens/ShippingScreen"
+import PaymentScreen from "./components/screens/PaymentScreen"
+import PlaceOrderScreen from "./components/screens/PlaceOrderScreen"
 export default function App() {
   let user = useSelector((state) => state.userLogin)
   let { userInfo } = user
@@ -18,6 +21,9 @@ export default function App() {
       <Header />
       <Container>
         <main className="py-3">
+          <Route path="/placeOrder" component={PlaceOrderScreen} />
+          <Route path="/payment" component={PaymentScreen} />
+          <Route path="/shipping" component={ShippingScreen} exact />
           <Route path="/login" component={UserLoginScreen} />
           <Route path="/register" component={RegisterScreen} />
           <Route path="/" component={HomeScreen} exact />

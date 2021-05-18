@@ -1,4 +1,4 @@
-import { CART_ADD_ITEM, CART_REMOVE_ITEM } from "./CartType"
+import { CART_ADD_ITEM, CART_REMOVE_ITEM, SAVE_PAYMENT, SAVE_SHIPPING_ADDRESS } from "./CartType"
 import Axios from "axios"
 let addItem = (id, name, image, price, countInStock, qty) => {
   let action = {
@@ -36,4 +36,19 @@ export const removeToCart = (id) => {
     localStorage.removeItem("addItem")
     dispatch(removeItem(id))
   }
+}
+
+export const saveShipingAddress = (data) => (dispatch) => {
+  dispatch({
+    type: SAVE_SHIPPING_ADDRESS,
+    data: data,
+  })
+  localStorage.setItem("shippingAddress", JSON.stringify(data))
+}
+
+export const savePayment = (data) => (dispatch) => {
+  dispatch({
+    type: SAVE_PAYMENT,
+    data: data,
+  })
 }

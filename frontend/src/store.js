@@ -4,8 +4,10 @@ import rootReducer from "./rootReducer"
 import { composeWithDevTools } from "redux-devtools-extension"
 let itemLocalstorge = localStorage.getItem("addItem") ? JSON.parse(localStorage.getItem("addItem")) : []
 let userLoginLocalstorge = localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")) : null
+const shippingAddressFromStorage = localStorage.getItem("shippingAddress") ? JSON.parse(localStorage.getItem("shippingAddress")) : {}
+
 let initialState = {
-  cart: { cartItems: itemLocalstorge },
+  cart: { cartItems: itemLocalstorge, shippingAddress: shippingAddressFromStorage },
   userLogin: { userInfo: userLoginLocalstorge },
 }
 

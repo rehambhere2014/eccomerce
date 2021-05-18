@@ -9,6 +9,7 @@ export default function UserLoginReducer(state = {}, action) {
       return { loading: false, userInfo: action.data }
     case USER_LOGIN_FAIL:
       return { loading: false, error: action.error }
+
     case USER_LOGOUT:
       return {}
     default:
